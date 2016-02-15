@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+  {% for gallery in galleries %}
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <a href="{{ url_for('photos', GAL_NAME=gallery[1]) }}">
+      <img class="img-responsive gallery" src="{{ pre }}{{ gallery[1] }}{{ post }}">
+      <center><h4>{{ gallery[0] }}</h4></center>
+    </a>
+  </div>
+{% endfor %}
+</div>
+
+{% endblock %}

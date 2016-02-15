@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="row">
+
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+    <img class="img-responsive gallery" src="static/img/galleries/{{pic1}}/square/1.jpg">
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <img class="img-responsive gallery" src="{{ url_for( 'static', filename='img/galleries/headshots/square/1.jpg') }}">
+  </div>
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+    <img class="img-responsive gallery" src="static/img/galleries/{{pic2}}/square/1.jpg">
+  </div>
+
+</div>
+
+<h3>The Lastest From Jamie</h3>
+<hr>
+
+<div class="row">
+
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <h4>October 2015</h4>
+    Jamie is proud to announce the launch of her first webseries as part of JHJ productions: <a href="https://www.youtube.com/channel/UCiczDuKQmn7ajxixHR2JpFg"><i>Jamie and Hannah's Happy Hour</i></a>. Check it out!
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <h4>August 2015</h4>
+    Jamie is performing in <i>Young Frankenstein</i> at <a href="http://www.theatrebythesea.biz/young-frankenstein.html">Theater By The Sea</a> August 19th - September 6th.
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <h4>July 2015</h4>
+    Jamie was nominated for Outstanding Actress for her performance as Marissa in <i>Circe</i>, a one-act in <i>Tech Support</i> as presented in the Planet Connections Festival.
+  </div>
+
+  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <h4>June 2015</h4>
+    Jamie played "Marissa" in <i>Tech Support</i> at the <a href="http://planetconnections.org/2015-full-productions/tech-support-circe-and-j-train/">Planet Connections Festival</a> June 20th - July 5th.
+  </div>
+
+</div>
+{% endblock %}

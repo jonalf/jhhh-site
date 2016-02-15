@@ -1,0 +1,183 @@
+/* color scheme
+blue:    #98C1D9
+purple:  #6969B3
+new-purple: #6363A8
+pink:    #FFA69E
+yellow:  #FAF3DD
+gray:    #5E6472
+*/
+
+h1 {
+    color: #6363A8;
+    font-size: 550%;
+}
+
+body {
+    background-color: #FFD4D1;
+    color: #5E6472;
+}
+
+.jumbotron {
+    background-color: #F1AB86;
+    padding-top: 5px;
+}
+
+.container {
+    font-family:"Tahoma", Geneva, sans-serif;
+}
+
+.page-header {
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-style: italic;
+    border-bottom: 1px solid #6969B3;
+}
+
+.gallery {
+    display: block;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+.boxed {
+    border: 2px solid;
+}
+
+.lined {
+    border-bottom: 2px solid;
+}
+
+.page-header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+}
+
+.media-container {
+    margin:auto;
+    text-align: center;
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.media-block {
+    margin:auto;
+    text-align: center;
+
+    position:relative;
+    padding-bottom:56.25%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;    
+    max-width: 640px;
+}
+
+.media-block iframe, .media-block object, .media-block embed {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/*==========================
+  NAVBAR STYLES
+==========================*/
+.navbar {
+    background-color: #8A8AD1;
+    border: 0px;
+    margin-bottom: 0px;
+}
+
+.navbar-right {
+    padding-right: 10px;
+}
+
+.navbar-default .navbar-brand {
+    color: #C3DCFF;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #C3DCFF;
+}
+
+/*
+this makes the navbar links centered
+but puts them all on one line when the
+toggle is used for sall screens 
+
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+.navbar .nav>li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+}
+*/
+
+/*navbar link stuff*/
+.navbar-brand>a {
+    color: #C3DCFF;
+}
+
+.navbar-brand>a:hover {
+    color: #FAF3DD;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #C3DCFF;
+    font-size: 1.25em;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #FFD4D1;
+}
+
+/*toggle icon*/
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #FAF3DD;    
+}
+
+/*dropdown menu header*/
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+										    background-color: #7B7BD1;
+										    color: #FAF3DD;
+										}
+
+/* dropdown menu mods */
+.dropdown-menu {
+    background-color: #6969B3;
+}
+
+.dropdown-menu>li>a {
+    color: #C3DCFF;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover {
+    background-color: #FAF3DD;
+    color: #6969B3;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>li>a {
+    color: #C3DCFF;
+    font-size: 1.1em;
+}
+/*==========================
+  END NAVBAR SECTION
+==========================*/
+
+
+
+hr {
+    border-color: #5E6472;
+}
+
+a {
+    color: #6969B3;
+}
