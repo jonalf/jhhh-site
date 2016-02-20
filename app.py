@@ -21,11 +21,11 @@ def root():
 
 @site.route( '/episodes.html' )
 def episodes():
-    return render_template( 'bio.html' )
+    return render_template( 'episodes.html' )
 
 @site.route( '/the_worst.html' )
 def the_worst():
-    return render_template( 'resume.html' )
+    return render_template( 'worst.html' )
 
 @site.route( '/about.html' )
 def about():
