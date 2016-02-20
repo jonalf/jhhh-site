@@ -65,6 +65,6 @@ def photos(GAL_NAME = None):
         return render_template( 'gallery.html', pics = pics, next_link = next_link, next_gallery = next_gallery )
 
 if __name__ == '__main__':
-    site.debug = True
-    site.run()
+    site.debug = True    
+    site.run(host="0.0.0.0", port=24601)
     
