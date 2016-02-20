@@ -59,16 +59,20 @@ body {
     margin-bottom: 5px;
 }
 
+.embed-responsive embed-responsive-16by9 {
+    max-width: 560px;
+}
+
 .media-block {
     margin:auto;
     text-align: center;
-
     position:relative;
     padding-bottom:56.25%;
     padding-top:30px;
-    height:0;
+    /*height:0;*/
     overflow:hidden;    
-    max-width: 640px;
+    max-width: 560px;
+    max-height: 315px;
 }
 
 .media-block iframe, .media-block object, .media-block embed {
