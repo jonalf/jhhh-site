@@ -19,20 +19,16 @@ def root():
     pic2 = gals.pop( random.randint(0, len(gals)-1 ) )[1]
     return render_template( 'main.html',  pic1=pic1, pic2=pic2 )
 
-@site.route( '/bio.html' )
-def bio():
+@site.route( '/episodes.html' )
+def episodes():
     return render_template( 'bio.html' )
 
-@site.route( '/resume.html' )
-def resume():
+@site.route( '/the_worst.html' )
+def the_worst():
     return render_template( 'resume.html' )
 
-@site.route( '/audio.html' )
-def audio():
-    return render_template( 'audio.html' )
-
-@site.route( '/video.html' )
-def video():
+@site.route( '/about.html' )
+def about():
     return render_template( 'video.html' )
 
 @site.route( '/photos/<GAL_NAME>.html' )

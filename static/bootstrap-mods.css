@@ -1,10 +1,7 @@
 /* color scheme
-blue:    #98C1D9
-purple:  #6969B3
-new-purple: #6363A8
-pink:    #FFA69E
-yellow:  #FAF3DD
-gray:    #5E6472
+orange:  #FF9D42
+blue:    #345995
+maroon:  #6E0D25
 */
 
 h1 {
@@ -13,8 +10,9 @@ h1 {
 }
 
 body {
-    background-color: #FFD4D1;
-    color: #5E6472;
+    background-color: #FF9D42;
+    color: #6E0D25;
+    font-size: 1.75em;
 }
 
 .jumbotron {
@@ -85,9 +83,14 @@ body {
   NAVBAR STYLES
 ==========================*/
 .navbar {
-    background-color: #8A8AD1;
+    background-color: #FF9D42;
     border: 0px;
     margin-bottom: 0px;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
 }
 
 .navbar-right {
@@ -95,53 +98,35 @@ body {
 }
 
 .navbar-default .navbar-brand {
-    color: #C3DCFF;
+    color: #345995;
 }
 
 .navbar-default .navbar-brand:hover {
-    color: #C3DCFF;
+    color: #345995;
 }
-
-/*
-this makes the navbar links centered
-but puts them all on one line when the
-toggle is used for sall screens 
-
-.navbar .nav {
-    margin: 0;
-    display: table;
-    width: 100%;
-}
-
-.navbar .nav>li {
-    display: table-cell;
-    width: 1%;
-    float: none;
-}
-*/
 
 /*navbar link stuff*/
 .navbar-brand>a {
-    color: #C3DCFF;
+    color: #345995;
 }
 
 .navbar-brand>a:hover {
-    color: #FAF3DD;
+    color: #6E0D25;
     text-decoration: none;
 }
 
 .navbar-default .navbar-nav>li>a {
-    color: #C3DCFF;
-    font-size: 1.25em;
+    color: #345995;
+    font-size: 1.75em;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: #FFD4D1;
+    color: #6E0D25;
 }
 
 /*toggle icon*/
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #FAF3DD;    
+    background-color: #6E0D25;    
 }
 
 /*dropdown menu header*/
@@ -179,5 +164,5 @@ hr {
 }
 
 a {
-    color: #6969B3;
+    color: #345995;
 }

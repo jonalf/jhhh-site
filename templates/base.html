@@ -17,8 +17,28 @@
 </head>
 
 <body>
+  {% block other_scripts %}
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+    fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
+  {% endblock %}
 
-      <nav class="navbar navbar-default navbar-static-top">
+  {% block header %}
+  <div class="container">
+    
+    <div class="page-header">
+      <img class="img-responsive" src="{{url_for('static', filename='img/banner.jpg')}}">
+    </div>
+          
+  </div>
+  {% endblock %}
+
+      <nav class="navbar navbar-default navbar-static-top text-center">
       <div class="container-fluid">
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
@@ -28,46 +48,21 @@
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
 	  </button><!--End toggle button-->
-	  <a class="navbar-brand visible-xs-inline" href="mailto:jamierthiessen@gmail.com">jamieRthiessen@gmail.com</a>
 	</div>
 	
 	<!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	  <ul class="nav navbar-nav">
 	    <li><a href="{{ url_for('root') }}">home</a></li>
+	    <li><a href="{{ url_for( 'episodes' ) }}">episodes</a></li>
+	    <li><a href="{{ url_for( 'the_worst' ) }}">the worst</a></li>
 	    <li><a href="{{ url_for( 'photos' ) }}">photos</a></li>
-	    <li><a href="{{ url_for( 'video' ) }}">media</a></li>
-	    <li><a href="{{ url_for( 'resume' ) }}">resume</a></li>
-	    <li><a href="{{ url_for( 'bio' ) }}">bio</a></li>
-	    <!--
-	    <li class="dropdown">
-	      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">media<span class="caret"></span></a>
-	      <ul class="dropdown-menu">
-		<li><a href="/video.html">video</a></li>
-		<li><a href="/audio.html">audio</a></li>
-	      </ul>
-	    </li>
-	    -->
+	    <li><a href="{{ url_for( 'about' ) }}">about us</a></li>
 	  </ul>
-
-	  <ul class="nav navbar-nav navbar-right hidden-xs">
-	    <li><a class="navbar-right" href="mailto:jamierthiessen@gmail.com">jamieRthiessen@gmail.com</a></li>
-	  </ul>
-	  
 	</div><!-- /.navbar-collapse -->
+	
       </div><!-- /.container-fluid -->
     </nav>
-
-    {% block header %}
-  <div class="container">
-    
-    <div class="page-header"><center>
-      <h1><b>Jamie and Hannah's Happy Hour</b></h1>
-      <h3>Actor &#8226 Singer &#8226 Dancer &#8226 Choreographer</h3>
-    </center></div>
-          
-  </div>
-  {% endblock %}
   
   <div class="container">   
     {% block content %}
@@ -91,5 +86,16 @@
     {% endblock %}
   </div>
 
+  {% block footer %}
+  <div class="container text-center">
+    <!-- YouTube Follow Button -->
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <div class="g-ytsubscribe" data-channelid="UCiczDuKQmn7ajxixHR2JpFg" data-layout="default" data-count="default"></div>
+    <!-- Twitter Follow Button -->
+    <a href="https://twitter.com/jhhappyhour" class="twitter-follow-button" data-show-count="false" data-size="medium">Follow @jhhappyhour</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!-- Facebook Follow Button -->
+    <div class="fb-follow" data-href="https://www.facebook.com/Jamie-and-Hannahs-Happy-Hour-920559447982302/" data-layout="button_count" data-show-faces="false"></div>
+  </div>
+  {% endblock %}
 </body>
 </html>
