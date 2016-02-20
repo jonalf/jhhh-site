@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="containter">
+  Why we started this web series:
+  <ul>
+    <li>Inequality!</li>
+    <li>Injustice!</li>
+  </ul>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-12 col-md-3">
+    <img class="img-responsive" src="{{ url_for( 'static', filename='img/jamie.jpg') }}">
+  </div>
+  <div class="col-sm-12 col-md-9">
+    Jamie -> Bio
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-12 col-md-3">
+    <img class="img-responsive" src="{{ url_for( 'static', filename='img/hannah.jpg') }}">
+  </div>
+  <div class="col-sm-12 col-md-9">
+    Hannah -> Bio
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-12 col-md-3">
+    <img class="img-responsive" src="{{ url_for( 'static', filename='img/jerry.jpg') }}">
+  </div>
+  <div class="col-sm-12 col-md-9">
+    Jerry -> Bio
+  </div>
+</div>
+
+{% endblock %}

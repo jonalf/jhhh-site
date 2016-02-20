@@ -29,7 +29,7 @@ def the_worst():
 
 @site.route( '/about.html' )
 def about():
-    return render_template( 'video.html' )
+    return render_template( 'about.html' )
 
 @site.route( '/photos/<GAL_NAME>.html' )
 @site.route( '/photos.html' )
