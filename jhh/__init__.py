@@ -19,6 +19,10 @@ def the_worst():
 def about():
     return render_template( 'about.html' )
 
+@site.route( '/support.html' )
+def support():
+    return render_template( 'support.html' )
+
 @site.route( '/photos.html' )
 def photos(GAL_NAME = None):
     return render_template( "photos.html" )
