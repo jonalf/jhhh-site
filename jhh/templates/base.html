@@ -38,11 +38,11 @@
   {% endblock %}
 
   {% block header %}
-  <div class="container">
-    
-    <div class="page-header">
-      <img class="img-responsive" src="{{url_for('static', filename='img/banner.jpg')}}">
-    </div>
+  <div class="container-fliud">
+    <img class="img-responsive container-fluid" style="padding:0px" src="{{url_for('static', filename='img/banner-test.jpg')}}">
+    <!-- <div class="page-header container-fluid">
+    <img class="img-responsive container-fluid" src="{{url_for('static', filename='img/banner.jpg')}}">
+    </div> -->
           
   </div>
   {% endblock %}
