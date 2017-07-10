@@ -31,6 +31,6 @@ def photos(GAL_NAME = None):
     return render_template( "photos.html" )
 
 if __name__ == '__main__':
-    #site.debug = True    
+    site.debug = True    
     site.run()
     
