@@ -4,7 +4,6 @@ site = Flask( __name__ )
 
 @site.route( '/' )
 def root():
-    print '======================================================='
     return render_template( 'main.html' )
 
 @site.route( '/episodes.html' )
@@ -18,6 +17,10 @@ def the_worst():
 @site.route( '/about.html' )
 def about():
     return render_template( 'about.html' )
+
+@site.route( '/prep.html' )
+def prep():
+    return render_template( 'prep.html' )
 
 @site.route( '/support.html' )
 def support():
