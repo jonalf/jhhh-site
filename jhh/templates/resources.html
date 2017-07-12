@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="containter text-center">
+  <h2 class="quote">
+    Excellent Resources
+  </h2>
+  <h3>
+    There are so many monologues, playwrights, scores and acting texts. If you're having trouble finding a good source, here are a few that we have found to be exceptionally useful.
+  </h3>
+</div>
+
+  <div class="container-fluid">
+    <div class="row">
+      {% for link in links %}
+      <div class="col-sm-2 col-xs-4">
+	{{ link|safe }}
+	</iframe>
+</div>
+      {% endfor %}
+    </div>
+  </div>
+<hr>
+{% endblock %}
