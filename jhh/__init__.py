@@ -1,9 +1,11 @@
 from flask import Flask, request, render_template, url_for, redirect
 from csv import DictReader
 from random import sample
+from requests import head
 
 site = Flask( __name__ )
 AD_TYPES = ['monologue', 'text', 'score'] #, 'playwright']
+LINK_PREFIX = 'src="'
 
 @site.route( '/' )
 def root():
@@ -30,8 +32,6 @@ def prep():
     for t in AD_TYPES:
         links[t] = [ r['link'] for r in d if r['type'] == t ]
         links[t] = sample(links[t], 2)
-    print links
-    
     return render_template( 'prep.html', links=links )
 
 @site.route( '/resources/<type>' )
@@ -43,8 +43,11 @@ def resources(type):
     d = DictReader(f)
     print type
     links= [ r['link'] for r in d if r['type'] == type ]
-    print links 
-    print len(links)
+    for l in links:
+        pos = l.find(LINK_PREFIX)
+        l = l[(pos+len(LINK_PREFIX)):-2]
+        #r = head('https:' + l)
+        #print l + '\t' + str(r.status_code)
     return render_template( 'resources.html', links=links )
 
 
