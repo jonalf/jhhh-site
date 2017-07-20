@@ -7,6 +7,9 @@ site = Flask( __name__ )
 AD_TYPES = ['monologue', 'text', 'score'] #, 'playwright']
 LINK_PREFIX = 'src="'
 
+DIR = os.path.dirname(__file__) or '.'
+AD_FILE = DIR + 'ad_links.csv'
+
 @site.route( '/' )
 def root():
     return render_template( 'main.html' )
@@ -25,7 +28,7 @@ def about():
 
 @site.route( '/prep.html' )
 def prep():
-    f = open('ad_links.csv')
+    f = open(AD_FILE)
     d = DictReader(f)
     d = [ l for l in d ]
     links = {}
@@ -39,7 +42,7 @@ def resources(type):
     if type not in AD_TYPES:
         type = AD_TYPES[0]
 
-    f = open('ad_links.csv')
+    f = open(AD_FILE)
     d = DictReader(f)
     print type
     links= [ r['link'] for r in d if r['type'] == type ]
