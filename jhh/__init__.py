@@ -2,13 +2,14 @@ from flask import Flask, request, render_template, url_for, redirect
 from csv import DictReader
 from random import sample
 from requests import head
+import os
 
 site = Flask( __name__ )
 AD_TYPES = ['monologue', 'text', 'score'] #, 'playwright']
 LINK_PREFIX = 'src="'
 
 DIR = os.path.dirname(__file__) or '.'
-AD_FILE = DIR + 'ad_links.csv'
+AD_FILE = DIR + '/ad_links.csv'
 
 @site.route( '/' )
 def root():
