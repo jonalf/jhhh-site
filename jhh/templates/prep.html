@@ -38,42 +38,54 @@ text-center">
 	<h3>
 	  Keep on learning with these helpful guides. For a successful actor, the research never stops!
 	</h3>
+
 	<div class="row">
-	  <div style="padding-left: 2px"><h4><a href="{{ url_for('resources', type='monologue') }}">Great monologue collections:</a></h4></div>
+	  <div style="padding-left: 2px"><h4><a href="{{ url_for('resources', type='play') }}">Plays we recommend (click for more):</a></h4></div>
+	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
+	    {{ links['play'][0]|safe }}
+	</iframe>
+	  </div>	  
+	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
+	    {{ links['play'][1]|safe }}
+	</iframe>
+	  </div>
+	</div> <!-- end left side row 1 -->
+
+	<div class="row">
+	  <div style="padding-left: 2px"><h4><a href="{{ url_for('resources', type='monologue') }}">Great monologue collections (click for more):</a></h4></div>
 	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
 	    {{ links['monologue'][0]|safe }}
 	    </iframe>
-	  </div>
-	  
-<div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
-  {{ links['monologue'][1]|safe }}
+	  </div>	 
+	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
+	    {{ links['monologue'][1]|safe }}
 	    </iframe>
 	  </div>
-	</div> <!-- end left side row 1 -->
+	</div> <!-- end left side row 2 -->
+
 	<div class="row">
-	  <div style="padding-left: 2px"><h4><a href="{{ url_for('resources', type='text') }}">Professional acting guides:</a></h4></div>
+	  <div style="padding-left: 2px"><h4><a href="{{ url_for('resources', type='text') }}">Professional acting guides (click for more):</a></h4></div>
 	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
 	    {{ links['text'][0]|safe }}
 	    </iframe>
 	  </div>
-<div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
-  {{ links['text'][1]|safe }}
+	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
+	    {{ links['text'][1]|safe }}
 	    </iframe>
-
 	  </div>	  
-	</div> <!-- end left side row 2 -->
+	</div> <!-- end left side row 3 -->
 
 	<div class="row">
-	  <div style="padding-left: 2px"><h4><a href="{{ url_for('resources', type='score') }}">Soundtracks! Glorious Soundtracks:</a></h4></div>
+	  <div style="padding-left: 2px"><h4><a href="{{ url_for('resources', type='score') }}">Scores! Glorious Scores (click for more):</a></h4></div>
 	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
 	    {{ links['score'][0]|safe }}
 	    </iframe>
 	  </div>
-<div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
-  {{ links['score'][1]|safe }}
+	  <div class="col-lg-4 col-md-6 col-sm-4 col-xs-6">
+	    {{ links['score'][1]|safe }}
 	    </iframe>
 	  </div>	  
-	</div> <!-- end left side row 2 -->
+	</div> <!-- end left side row 4 -->
 
 	
       </div> <!-- end left side -->

@@ -5,7 +5,7 @@ from requests import head
 import os
 
 site = Flask( __name__ )
-AD_TYPES = ['monologue', 'text', 'score'] #, 'playwright']
+AD_TYPES = ['monologue', 'text', 'score', 'play']
 LINK_PREFIX = 'src="'
 
 DIR = os.path.dirname(__file__) or '.'
@@ -45,7 +45,6 @@ def resources(type):
 
     f = open(AD_FILE)
     d = DictReader(f)
-    print type
     links= [ r['link'] for r in d if r['type'] == type ]
     for l in links:
         pos = l.find(LINK_PREFIX)
